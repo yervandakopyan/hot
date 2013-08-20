@@ -7,7 +7,7 @@ loged_in();
 $validate=new validate_base();
 $users=new users_user();
 $location = new location_base();
-
+$cat = new categories_base();
 if($_POST) {
 
 	try{
@@ -85,7 +85,7 @@ if($_POST) {
 
 		if($_POST['cmd']=='update_display') {
 			$users->free();
-
+			
 			$fields=array(
 				'Gender'=>$_POST['gender'],
 				'Age'=>trim($_POST['age']),
@@ -118,14 +118,13 @@ if($_POST) {
 				'sexual_preference'=>$_POST['sexual_preference'],
 				'about_me'=>$_POST['about_me'],
 			));
-
+					
 			if($_POST['empty_ext'] == 'yes') {
 				$users->setId_User($id_user);
 				$users->addUserInfoExt();
 			} else {
 				$users->updateUserInfoExt($id_user);
 			}
-			
 		}
 /**
  UPLOAD IMAGES
@@ -193,7 +192,8 @@ try {
 	
 	//get user display info
 	$userInfo = current($users->getUserInfoExt());
-
+	$categories = $cat->getCategories();
+	
 	$empty="";
 	if(empty($userInfo)) {
 		$empty = 'yes';
@@ -499,7 +499,28 @@ try {
 				</div>
 				<div class="clear"></div>
 			</div>
-
+			
+			<br />
+			
+			<div class="even">
+				<div class="words" style="width:50%;">Categories:</div>
+				<div class="clear"></div>
+			</div>
+			<br />
+			
+			<?php foreach($categories as $category):?>
+				<div class="check">
+					<input type="checkbox" name="category[]" value="<?php echo $category['id_category']; ?>" />
+					<?php echo $category['category_name']; ?>
+				
+				</div>
+				
+			
+			<?php endforeach; ?>
+			
+			<div class="clear"></div>
+			<br />
+				
 			<div class="even">
 				<div class="words">About Me: </div>
 				<div class="fields">
