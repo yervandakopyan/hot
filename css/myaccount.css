@@ -10,3 +10,10 @@
     margin-left: 50px;
     margin-top: 10px;
 }
+
+.check {
+    float: left;
+    height: 22px;
+    padding-bottom: 6px;
+    width: 143px;
+}
