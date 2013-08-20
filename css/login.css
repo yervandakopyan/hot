@@ -1,0 +1,67 @@
+.login-form {
+    left: 20%;
+    margin-left: 170px;
+    top: 230px;
+    width: 290px;
+    z-index: 5;
+    margin-top:75px;
+}
+
+.login {
+	background-color: #FFFFFF;
+    background-position: right top;
+    background-repeat: no-repeat;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    float: right;
+    padding: 20px;
+    position: relative;
+    width: 330px;
+    z-index: 600;
+	border: 1px solid #E6E6E6;
+}
+
+#lpmod {
+    margin: 0;
+    padding: 0;
+    width: 253px;
+	font-family: arial;
+    font-weight: 400;
+}
+
+.login #lpmod span#si3 {
+    display: block;
+    padding-bottom: 10px;
+}
+
+.login #lpmod span#si3 h3 {
+    color: #333333;
+    font: bold 14px Arial;
+}
+
+#submitID {
+	border: 1px solid #777777;
+    border-radius: 6px 6px 6px 6px;
+    clear: both;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px;
+    padding: 5px 0;
+    width: 253px;
+	/*background: -moz-linear-gradient(center top , #00B8E6 0pt, #4391E3 100%) repeat scroll 0 0 transparent;
+	background: -webkit-linear-gradient(top,#00B8E6 0,#4391E3 100%);*/
+	background: #00B8E6;
+	margin-left: 50px
+}
+
+#getSn {
+	clear: both;
+    display: block;
+    font: 14px Arial;
+    text-align: center;
+	color: #6699CC;
+    text-decoration: none;
+}

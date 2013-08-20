@@ -1,0 +1,12 @@
+#about_me {
+	width:158px;
+	height:156px;
+}
+
+.img_display {
+   	float: left;
+    height: 173px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
